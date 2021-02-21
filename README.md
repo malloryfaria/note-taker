@@ -6,7 +6,6 @@
 
 - [Description](#description)
 - [Usage](#usage)
-- [Demo](#demo)
 - [Deployed](#deployedapplicationlink)
 - [Languages](#languages)
 - [Screenshot](#screenshot)
@@ -26,24 +25,18 @@ An application called Note Taker that can be used to write and save notes. This 
 As a user, you would enjoy using this application to be able to write and save notes
 so that you can organize your thoughts and keep track of tasks that you need to complete <br />
 
-## Demo
-
-Click the image below for a video demonstration of the application and the generated index.html file at the end:
-
-[![Note Taker Demo](./assets/images/demoscreenshot.jpg?raw=true)](https://youtu.be/placeholder)
-
-
 ## Deployed application link
 
-heroku.placeholder.com <br />
+https://mallory-note-taker.herokuapp.com/ <br />
 
 ## Languages
 
-JavaScript, Express.js, Heroku, JSON, Node <br />
+JavaScript, Express.js, Heroku, JSON, Node, Path <br />
 
 ## Screenshot
 
 ![Screenshot of the application](./assets/images/screenshot.jpg?raw=true) <br /> 
+![Screenshot of the application](./assets/images/screenshot2.jpg?raw=true) <br /> 
 
 
 ## License
