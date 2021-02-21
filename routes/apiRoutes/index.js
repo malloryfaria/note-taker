@@ -3,26 +3,33 @@ const path = require('path');
 const router = require('express').Router();
 const notes = require('../../db/db.json');
 
-const noteArray = [];
 
 router.get('/notes', (req, res) => {
     res.json(notes);
 });
 
 router.post('/notes', (req, res) => {
-  let noteText = req.body;
+  // set id based on what the next index of the array will be
+  req.body.id = notes.length.toString();
+  let postNote = req.body;
 
-  if (!noteText) {
+  if (!postNote) {
     res.status(400).send('The note is empty.');
   } else {
-    noteArray.push(noteText);
-    res.json(notes);
-    fs.writeFileSync(
-      path.join(__dirname, '../../db/db.json'),
-      JSON.stringify(noteArray)
-    );
-  }
+  notes.push(postNote);
+
+  fs.writeFile("db/db.json", JSON.stringify(notes), err => {
+      if (err) {
+          throw err;
+      } else {
+          return true;
+      }
+  });
+
+  res.json(notes);
+}
 });
+
 
 
 module.exports = router;
