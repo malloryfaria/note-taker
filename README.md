@@ -35,8 +35,8 @@ JavaScript, Express.js, Heroku, JSON, Node, Path <br />
 
 ## Screenshot
 
-![Screenshot of the application](./assets/images/screenshot.jpg?raw=true) <br /> 
-![Screenshot of the application](./assets/images/screenshot2.jpg?raw=true) <br /> 
+![Screenshot of the application](./public/assets/images/screenshot.jpg?raw=true) <br /> 
+![Screenshot of the application](./public/assets/images/screenshot2.jpg?raw=true) <br /> 
 
 
 ## License
