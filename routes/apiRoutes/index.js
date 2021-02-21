@@ -1,7 +1,7 @@
 const path = require('path');
 const router = require('express').Router();
 const notes = require('../../db/db.json');
-const { deleteNote } = require('../../public/assets/js/index');
+// const { deleteNote } = require('../../public/assets/js/index');
 
 router.get('/notes', (req, res) => {
     res.json(notes);
