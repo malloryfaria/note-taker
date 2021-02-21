@@ -1,7 +1,7 @@
+const fs = require('fs');
 const path = require('path');
 const router = require('express').Router();
 const notes = require('../../db/db.json');
-// const { deleteNote } = require('../../public/assets/js/index');
 
 router.get('/notes', (req, res) => {
     res.json(notes);
@@ -16,15 +16,13 @@ router.post('/notes', (req, res) => {
       res.status(400).send('The note is empty.');
     } else {
       const note = notes.push(noteText);
+      fs.writeFileSync(
+        path.join(__dirname, '../../db/db.json'),
+        JSON.stringify(noteText)
+      );
       res.json(note);
+
     }
   });
-
-// router.delete('/notes:id', (req, res) => {
-//   let id = req.params.id;
-
-//   const deleter = deleteNote(id, notes);
-//   res.json(deleter);
-// })
 
 module.exports = router;
